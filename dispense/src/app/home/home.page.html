@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Mes dépenses quotidiennes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col >
+      <ion-button id="open-modal" expand="block">Ajouter une dépense</ion-button>
+      <ion-row *ngFor="let d of entry">
+        <ion-col>
+          <ion-card>
+            <ion-card-content>
+              <ion-list>
+                <ion-item>{{d[0]}}</ion-item>
+                <ion-item>{{d[1]}}€</ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+      <ion-modal trigger="open-modal">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-button (click)="cancel()">Annuler</ion-button>
+              </ion-buttons>
+              <ion-title>Ajouter</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="confirm()" [strong]="true">Confirmer</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <ion-item>
+              <ion-label position="stacked">Type</ion-label>
+              <ion-input type="text" placeholder="Type d'achat" [(ngModel)]="type"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="stacked">Montant</ion-label>
+              <ion-input type="text" placeholder="Montant en €" [(ngModel)]="amount"></ion-input>
+            </ion-item>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+
+
+      <ion-list id="expenses-list">
+        <ion-item *ngFor="let d of dispense">{{ d.type }} : {{ d.amount}}€</ion-item>
+
+      </ion-list>
+      <ion-text color="dark">
+        <p class="ion-margin" id="total-expenses">Total: {{total}}€</p>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-start">Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "dispense",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
