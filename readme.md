@@ -26,19 +26,23 @@ ionic serve (avec option -l si vous souhaitez travaillez dans le lab d'ionic )
 si ce n'est pas le cas executer:
 npm install -D -E @ionic/lab
 
+Ajouter une tabs 
+```bash
+ionic generate page nom_de_la_page
+```
+
 
 # Projet
-
 Site de recette de cuisine type marmiton
--page d'accueil
--formulaire ajout recette
--formulaire inscription
--formulaire connexion
--backoffice: tableau de gestion des recettes pour la modération, gestion des catégories, gestion des utilisateurs (à voir pour les avis)
--tableau recap des recettes postées par l'utilisateur avec crud
--gestion de profil
--formulaire de dépot d'avis
--fiche individuelle recette
+    -page d'accueil
+    -formulaire ajout recette
+    -formulaire inscription
+    -formulaire connexion
+    -backoffice: tableau de gestion des recettes pour la modération, gestion des catégories, gestion des utilisateurs (à voir pour les avis)
+    -tableau recap des recettes postées par l'utilisateur avec crud
+    -gestion de profil
+    -formulaire de dépot d'avis
+    -fiche individuelle recette
 
 ## BDD
     - recette
