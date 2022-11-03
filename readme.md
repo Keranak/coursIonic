@@ -30,33 +30,15 @@ npm install -D -E @ionic/lab
 # Projet
 
 Site de recette de cuisine type marmiton
-
-## Homepage
-affichage des catégories en cards
-entrée, plat, dessert du jour en mode aléatoire (avec note sup à 4)
-
-authentif pour tout les utilisateurs
-
-tout le monde peux poster une recette
-
-Formulaire :
-    - ajout recette
-    - Connexion
-    - Inscription
-    - avis sur une recette
-
-fiche individuelle de recette
-
-
-tableau recap des recettes publié par l'utilisateur avec crud
-gestion de profil
-
-
-## back office
-    - gestion des recettes
-    - gestion des utilisateurs
-    - gestion des catégories
-    - gestion des commentaires
+-page d'accueil
+-formulaire ajout recette
+-formulaire inscription
+-formulaire connexion
+-backoffice: tableau de gestion des recettes pour la modération, gestion des catégories, gestion des utilisateurs (à voir pour les avis)
+-tableau recap des recettes postées par l'utilisateur avec crud
+-gestion de profil
+-formulaire de dépot d'avis
+-fiche individuelle recette
 
 ## BDD
     - recette
