@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IONIC</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+<body>
+<ion-app>
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title class="ion-text-center">Gestion de dépenses quotidiennes</ion-title>
+            <ion-text slot="end" id="total" ></ion-text>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <ion-row>
+            <ion-col size-lg="6" offset="3">
+
+                <ion-row id="message">
+
+                </ion-row>
+
+
+                <ion-button id="open-modal" expand="block">Déclarer une dépense</ion-button>
+
+
+                <ion-modal trigger="open-modal">
+                    <ion-header>
+                        <ion-toolbar>
+                            <ion-buttons slot="start">
+                                <ion-button color="primary" onclick="cancel()">
+                                    <ion-icon name="close"></ion-icon>
+                                    Annuler
+                                </ion-button>
+                            </ion-buttons>
+                            <ion-title class="ion-text-center">Déclarez votre dépense</ion-title>
+                            <ion-buttons slot="end">
+                                <ion-button color="primary" onclick="confirm()" strong="true">
+                                    <ion-icon name="add-circle"></ion-icon>
+                                    Ajouter
+                                </ion-button>
+                            </ion-buttons>
+                        </ion-toolbar>
+                    </ion-header>
+                    <ion-content class="ion-padding" [fullscreen]="true">
+                        <ion-row>
+                            <ion-col size-lg="6" offset="3">
+                                <ion-item>
+                                    <ion-label position="floating">Type de dépense</ion-label>
+                                    <ion-input id="type"  type="text" ></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Montant de la dépense</ion-label>
+                                    <ion-input id="montant" type="text" ></ion-input>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-content>
+                </ion-modal>
+
+            </ion-col>
+        </ion-row>
+    </ion-content>
+    <ion-footer>
+        <ion-toolbar>
+            <ion-title> copyright</ion-title>
+        </ion-toolbar>
+    </ion-footer>
+
+
+</ion-app>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
