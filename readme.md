@@ -34,3 +34,55 @@ Site de recette de cuisine type marmiton
 ## Homepage
 affichage des catégories en cards
 entrée, plat, dessert du jour en mode aléatoire (avec note sup à 4)
+
+authentif pour tout les utilisateurs
+
+tout le monde peux poster une recette
+
+Formulaire :
+    - ajout recette
+    - Connexion
+    - Inscription
+    - avis sur une recette
+
+fiche individuelle de recette
+
+
+tableau recap des recettes publié par l'utilisateur avec crud
+gestion de profil
+
+
+## back office
+    - gestion des recettes
+    - gestion des utilisateurs
+    - gestion des catégories
+    - gestion des commentaires
+
+## BDD
+    - recette
+        -titre
+        - etapes
+        - ingredients
+        - photo
+        - difficulté
+        - temps de préparation
+        - temps de cuisson
+        - nombre de personne
+        - date de publication
+        - note
+    - utilisateur
+        - mail
+        - mot de passe
+        - staut
+        - pseudo
+    - recette_categories
+        - id_recette
+        - id_categorie
+    - catégorie
+        - titre
+    - avis
+        - id_recette
+        - id_utilisateur
+        - note
+        - commentaire
+        - date
